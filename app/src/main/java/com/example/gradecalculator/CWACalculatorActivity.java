@@ -41,12 +41,10 @@ public class CWACalculatorActivity extends AppCompatActivity {
     private void addGwaField() {
         gwaCounter++;
 
-        // Container layout for field and delete button
         LinearLayout container = new LinearLayout(this);
         container.setOrientation(LinearLayout.HORIZONTAL);
         container.setPadding(0, 10, 0, 10);
 
-        // Create new EditText
         EditText gwaField = new EditText(this);
         gwaField.setId(View.generateViewId());
         gwaField.setHint("GWA");
@@ -58,7 +56,6 @@ public class CWACalculatorActivity extends AppCompatActivity {
 
         gwaFields.add(gwaField);
 
-        // Create delete button
         Button btnDelete = new Button(this);
         btnDelete.setText("X");
         btnDelete.setBackgroundColor(Color.RED);
@@ -68,14 +65,12 @@ public class CWACalculatorActivity extends AppCompatActivity {
             linearLayout.removeView(container);
             gwaFields.remove(gwaField);
             gwaContainers.remove(container);
-            calculateGWA(); // Recalculate after deletion
+            calculateGWA();
         });
 
-        // Add field and button to container
         container.addView(gwaField);
         container.addView(btnDelete);
 
-        // Add container to layout
         linearLayout.addView(container);
         gwaContainers.add(container);
     }

@@ -38,6 +38,15 @@ public class GradeCalculatorActivity extends AppCompatActivity {
             return insets;
         });
 
+        Model.course.clear();
+        Model.prelim.clear();
+        Model.midterm.clear();
+        Model.prefi.clear();
+        Model.finals.clear();
+        Model.buttons.clear();
+        Model.editTexts.clear();
+        Model.textViews.clear();
+
         linearLayout = findViewById(R.id.linearLayout);
         lblGWA = findViewById(R.id.lblGWA);
 
